@@ -1,0 +1,77 @@
+.\" Manpage for rcon.
+.TH man 1 "April 15 2021" "1.1" "rcon man page"
+.SH NAME
+rcon \- Execute rcon commands
+.SH SYNOPSIS
+rcon <\fB-f\fR "filename.ini"> [\fB-a\fR IPNumber] [\fB-p\fR Port] <command>
+.SH DESCRIPTION
+Linux command line utility to send rcon commands.
+.TP
+Any command line parameter will override the INI file.
+.SH OPTIONS
+.TP
+\fB\-f \-a \-p\fR and \fBcommand\fR are all necessary.  However, only \fB\-f\fR and \fBcommand\fR are required as command-line arguments.  If address and port are in the file, it is not required to pass them as arguments.
+.TP
+\fB\-?\fR Shows the usage syntax and quits.
+.TP
+\fB\-v\fR Enables verbose mode which means more detailed messages.
+.TP
+\fB\-f "filename.ini"\fR Location to .ini file containing at least the password.
+.TP
+\fB\-a IPNumber\fR IP Address of the rcon server. This option is not needed if added to the .ini file.
+.TP
+\fB\-p Port\fR Port on the rcon server. This option is not needed if added to the .ini file.
+.TP
+\fBcommand\fR rcon command to send to the rcon server.
+.SH FILE FORMAT
+[rcon]
+.br
+password=\fBYOUR_RCON_PASSWORD\fR
+.br
+ipaddress=\fB127.0.0.1\fR
+.br
+port=\fB27015\fR
+.SH EXAMPLES
+Run a DoExit command:
+  rcon \-f "/etc/rcon.ini" \-a 127.0.0.1 \-p 27015 "DoExit"
+
+Run a DoExit command and use the address and port defined in ini file:
+  rcon \-f "/etc/rcon.ini" "DoExit"
+
+Run a Broadcast message command using an island-instance ini file:
+  rcon \-f "/etc/rcon-island.ini" "Broadcast About to save the world!"
+
+Run a SaveWorld command using a ragnarok-instance ini file:
+  rcon \-f "/etc/rcon-ragnarok.ini" "SaveWorld"
+.SH EXIT CODES
+\fB0\fR = Good
+.br
+\fB1\fR = Unknown option
+.br
+\fB2\fR = Missing file parameter
+.br
+\fB3\fR = Missing command parameter
+.br
+\fB4\fR = Missing address parameter/config
+.br
+\fB5\fR = Missing port parameter/config
+.br
+\fB6\fR = Invalid file or format
+.br
+\fB7\fR = Connect failed
+.br
+\fB8\fR = Error sending password
+.br
+\fB9\fR = Could not authenticate
+.br
+\fB10\fR = Command send error
+.SH SEE ALSO
+<https://www.ryanschulze.net/archives/1052>
+.SH BUGS
+No known bugs.
+.SH AUTHOR
+Version 1.0 - [ASY]Zyrain
+.br
+Version 1.1 - LHammonds
+.br
+Man pages - LHammonds
