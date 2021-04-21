@@ -7,8 +7,8 @@
 ## Source        : https://www.ryanschulze.net/archives/1052
 ## Purpose       : Linux command line utility to execute rcon commands
 ## Compatibility : Verified on Ubuntu Server 20.04 LTS
-## Man Page      : Copy rcon.man to /usr/share/man/man1
-## Requirements  : None
+## Man Page      : cp rcon.man /usr/local/share/man/man1/rcon.1
+## Requirements  : Compile with "gcc -o rcon rcon.c"
 ## Run Frequency : As needed.
 ## Parameters    : 
 ##   -? (show usage, 100% optional)
@@ -42,11 +42,6 @@
 ##                    Created a man page for better documentation.
 ##                    Reduced global variable usage.
 #############################################################
-#
-# Compile it with:
-#
-#   gcc -o rcon rcon.c
-#
 # Note, it should work on non-linux too, but may require changing the 
 # socket stuff (i.e. windows will definitely need to add the winsock
 # initialization line)
