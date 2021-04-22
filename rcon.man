@@ -7,7 +7,7 @@ rcon <\fB-f\fR "filename.ini"> [\fB-a\fR IPNumber] [\fB-p\fR Port] <command>
 .SH DESCRIPTION
 Linux command line utility to send rcon commands.
 .TP
-Any command line parameter will override the INI file.
+Any command line parameter will take precedence over the corresponding option in the INI file.
 .SH OPTIONS
 .TP
 \fB\-f \-a \-p\fR and \fBcommand\fR are all necessary.  However, only \fB\-f\fR and \fBcommand\fR are required as command-line arguments.  If address and port are in the file, it is not required to pass them as arguments.
