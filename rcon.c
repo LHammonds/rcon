@@ -42,9 +42,6 @@
 ##                    Created a man page for better documentation.
 ##                    Reduced global variable usage.
 #############################################################
-# Note, it should work on non-linux too, but may require changing the 
-# socket stuff (i.e. windows will definitely need to add the winsock
-# initialization line)
 */
 #include <stdio.h>       // printf
 #include <stdlib.h>      // atoi,abort
