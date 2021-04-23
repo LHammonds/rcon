@@ -269,8 +269,6 @@ int main(int argc, char **argv)
   char string1[4096];
   char string2[4096];
   unsigned long argfileul, argaddrul, argportul;
-  extern char *optarg;
-  extern int optind, opterr, optopt;
   int ret, i, c, argf, arga, argp, sock, arg, auth;
   struct sockaddr_in a;
   short port;
