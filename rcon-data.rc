@@ -1,0 +1,23 @@
+1 VERSIONINFO
+FILEVERSION     1,1,0,0
+PRODUCTVERSION  1,1,0,0
+BEGIN
+  BLOCK "StringFileInfo"
+  BEGIN
+    BLOCK "040904E4"
+    BEGIN
+      VALUE "CompanyName", "Ubuntu"
+      VALUE "FileDescription", "rcon utility"
+      VALUE "FileVersion", "1.1"
+      VALUE "InternalName", "rcon"
+      VALUE "LegalCopyright", "[ASY]Zyrain"
+      VALUE "OriginalFilename", "rcon.exe"
+      VALUE "ProductName", "RCON"
+      VALUE "ProductVersion", "1.1"
+    END
+  END
+  BLOCK "VarFileInfo"
+  BEGIN
+    VALUE "Translation", 0x409, 1252
+  END
+END
