@@ -68,7 +68,9 @@ rcon -f "/etc/rcon-ragnarok.ini" "SaveWorld"
 ```
 
 # SEE ALSO
-<https://www.ryanschulze.net/archives/1052>
+* [Ryan Schulze: rcon.c sorcecode (for linux)](https://www.ryanschulze.net/archives/1052)
+* [How to Install Ark: Survival Evolved on Ubuntu Server 20.04 LTS](https://hammondslegacy.com/forum/viewtopic.php?f=40&t=294)
+* [Steam Guide: RCON Command-Line Utility](https://steamcommunity.com/sharedfiles/filedetails/?id=2464412536)
 
 # BUGS
 No known bugs.
